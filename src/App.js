@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import CrewPage from './pages/Crew/CrewPage';
+import DestinationPage from './pages/Destination/DestinationPage';
+import HomePage from './pages/HomePage/HomePage';
+import { Data } from './data';
 
-function App() {
+import { Switch, Route, Redirect } from "react-router-dom";
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/">
+        <HomePage />
+      </Route>
+
+      <Route path="/destination/:planetId">
+        <DestinationPage data = {Data} />
+      </Route>
+
+      <Route path="/destination">
+        <Redirect to="/destination/moon" />
+      </Route>
+      
+      <Route path="/crew">
+        <CrewPage />
+      </Route>
+    
+      {/* <Route path="/crew/:crewId">
+        <CrewPage data={Data} />
+      </Route>
+      
+      <Route path="/crew">
+        <Redirect to="/crew/Douglas-Hurley" />
+      </Route> */}
+    
+    
+    </Switch>
+    
   );
 }
 
