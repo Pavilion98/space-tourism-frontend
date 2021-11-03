@@ -634,7 +634,7 @@ body {
     grid-column: 2;
   }
 
-.grid-container--home > *:last-child {
+  .grid-container--home > *:last-child {
     grid-column: 3;  
   }
 
@@ -666,5 +666,5 @@ body {
   
   .grid-container--crew > .dot-indicators {
     justify-self: start;
-}
+  }
 }
