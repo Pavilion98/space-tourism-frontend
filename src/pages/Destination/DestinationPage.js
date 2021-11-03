@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import PlanetImage from '../../components/Destination/PlanetImage';
 import PlanetTabs from '../../components/Destination/PlanetTabs';
 import PlanetStats from '../../components/Destination/PlanetStats';
-// import Moon from "../../assets/destination/image-moon.png";
+import Moon from "../../assets/destination/image-moon.png";
 
 import { useParams } from 'react-router';
 

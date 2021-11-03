@@ -11,30 +11,21 @@ import { Switch, Route, Redirect } from "react-router-dom";
 const App = () => {
   return (
     <Switch>
-      <Route exact path="/">
-        <HomePage />
+      <Route path="/crew/:crewId">
+        <CrewPage data={Data} />
       </Route>
-
+      <Route path="/crew">
+        <Redirect to="/crew/Douglas-Hurley" />
+      </Route>
       <Route path="/destination/:planetId">
-        <DestinationPage data = {Data} />
+        <DestinationPage data={Data} />
       </Route>
-
       <Route path="/destination">
         <Redirect to="/destination/moon" />
       </Route>
-      
-      <Route path="/crew">
-        <CrewPage />
+      <Route path="/">
+        <HomePage />
       </Route>
-    
-      {/* <Route path="/crew/:crewId">
-        <CrewPage data={Data} />
-      </Route>
-      
-      <Route path="/crew">
-        <Redirect to="/crew/Douglas-Hurley" />
-      </Route> */}
-    
     
     </Switch>
     

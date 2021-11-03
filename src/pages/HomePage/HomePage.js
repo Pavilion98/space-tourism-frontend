@@ -20,8 +20,13 @@ const  HomePage = () => {
                 </div>
 
                 <div>
-                    <Link to="/destination">
+                    <Link 
+                    style={{textDecoration: "none"}} 
+                    to="/destination"
+                    >
+
                         <Button/>
+                        
                     </Link>
                 </div>
             </div>

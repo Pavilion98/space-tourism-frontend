@@ -2,7 +2,7 @@ import React from 'react'
 
 const PlanetImage = ({ src }) => {
     return <img 
-    src={`../../${src}`}
+    src={require(`../../${src}`).default}
     alt="The Moon" 
     />
 }
