@@ -37,9 +37,9 @@ const CrewPage = ({data}) => {
     const showContent = () => 
         Object.keys(crewInfo).length > 0 && (
             <>
-                <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
+                <h1 className="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
                 
-                <div class="dot-indicators flex">
+                <div className="dot-indicators flex">
                 <Tabs />
                 </div>
                 
