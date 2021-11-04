@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import PlanetImage from '../../components/Destination/PlanetImage';
 import PlanetTabs from '../../components/Destination/PlanetTabs';
 import PlanetStats from '../../components/Destination/PlanetStats';
-import Moon from "../../assets/destination/image-moon.png";
+import ErrorDisplay from '../ErrorDisplay';
 
 import { useParams } from 'react-router';
 
@@ -29,6 +29,9 @@ const DestinationPage = ({data}) => {
     
         setPlanetData(planet[0]);
       }, [destinations, slug]);
+
+    const handleNoDataError = () =>
+    isError && <ErrorDisplay dataName="Planet" pageName="destination" />;
     
     const {
         name,
@@ -61,6 +64,7 @@ const DestinationPage = ({data}) => {
             <a className="skip-to-content" href="#main">Skip to content</a>
             <Navbar />
             <div id="main" className="grid-container grid-container--destination flow">
+                {handleNoDataError()}
                 {showContent()}
             </div>
         </body>

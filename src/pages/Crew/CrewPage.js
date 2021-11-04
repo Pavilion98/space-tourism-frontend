@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import { useParams } from "react-router-dom";
 import CrewTabs from "./CrewTabs";
+import ErrorDisplay from '../ErrorDisplay';
 
 // import Commander from '../../assets/crew/image-douglas-hurley.png';
 
@@ -26,6 +27,10 @@ const CrewPage = ({data}) => {
     }, [crew, person])
 
     const Tabs = () => crew.map(({ name }, index) => <CrewTabs name={name} key={index} />)
+    
+    const handleNoDataError = () =>
+    isError && <ErrorDisplay dataName="Crew member" pageName="crew" />;
+    
     const { name, images: { png } = {}, role, bio } = crewInfo;
 
 
@@ -55,6 +60,7 @@ const CrewPage = ({data}) => {
             <a className="skip-to-content" href="#main">Skip to content</a>
             <Navbar />
             <div id="main" className="grid-container grid-container--crew flow">
+                {handleNoDataError()}
                 {showContent()}
             </div>
         </body>

@@ -15,9 +15,9 @@ const PlanetTabs = ({ destinations }) => {
             {destinations.map( ({name}, index) => (
                 <Link  
                 onClick={() => toggleTab(index)} 
-                aria-selected = {`${clickedTab === index ? "true" : "false" }`}
+                // aria-selected = {`${clickedTab === index ? "true" : "false" }`}
                 style={{textDecoration: "none"}}
-                className= "uppercase ff-sans-cond text-accent letter-spacing-2"
+                className= {`${clickedTab === index ? "active" : "" } uppercase ff-sans-cond text-accent letter-spacing-2`}
                 to = {`./${name.toLowerCase()}`}
                 key = {index}
                 > 

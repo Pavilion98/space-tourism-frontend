@@ -8,7 +8,7 @@ const Navbar = () => {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <header class="primary-header flex">
+        <header className="primary-header flex">
             <div>
                 <Logo className="logo" />
             </div>

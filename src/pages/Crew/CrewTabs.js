@@ -9,7 +9,7 @@ const CrewTabs = ({ name, index }) => {
     const toggleTab = (index) => {
         setTabClicked(index)
     }
-    return <Link aria-selected = {`${tabClicked === index ? "true" : "false" }`} onClick={() => toggleTab(index)} to={`./${hyphenated}`} ><span className="sr-only"> {name} </span></Link>
+    return <Link className={`${tabClicked === index ? "active" : "" }`} onClick={() => toggleTab(index)} to={`./${hyphenated}`} ><span className="sr-only"> {name} </span></Link>
 };
 
 export default CrewTabs;
