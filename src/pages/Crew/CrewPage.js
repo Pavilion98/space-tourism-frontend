@@ -40,7 +40,7 @@ const CrewPage = ({data}) => {
                 <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
                 
                 <div class="dot-indicators flex">
-                    <Tabs />
+                <Tabs />
                 </div>
                 
                 <article className="crew-details flow">
