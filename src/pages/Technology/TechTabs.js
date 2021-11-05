@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const TechTabs = ({ name, index }) => {
+const TechTabs = ({ name, number }) => {
     const hyphenated = name.split(" ").join("-");
 
-    // const [dotClicked, setDotClicked ] = useState();
-    
-    // const toggleTab = (index) => {
-    //     setDotClicked(index);
+    // const [numClicked, setNumClicked ] = useState();
+
+    // const toggleClick = (number) => {
+    //     setNumClicked(number);
+    //     console.log(number);
     // }
-    return <Link to={`./${hyphenated}`}>{index}<span className="sr-only"> {name} </span></Link>
+    
+    return <Link style={{textDecoration: "none"}} to={`./${hyphenated}`}><span className="sr-only"> {name} </span>{number}</Link>
 };
 
 export default TechTabs;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const PlanetTabs = ({ destinations }) => {
 
-    const [clickedTab, setClickedTab ] = useState()
+    const [clickedTab, setClickedTab ] = useState(0)
     
     const toggleTab = (index) => {
         setClickedTab(index);

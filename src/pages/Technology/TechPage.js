@@ -25,19 +25,22 @@ const TechPage = ({data}) => {
     }, [technology, tech])
 
 
-    const TabsT = () => technology.map(({ name }, index) => <TechTabs name={name} key={index} />)
+    const TabsT = () => technology.map(({ name, number }) => <TechTabs name={name} number={number} />)
 
     const handleNoDataError = () =>
     isError && <ErrorDisplay dataName="Tech Item" pageName="technology" />;
 
-    const { name, images: { portrait } = {}, description } = techInfo;
+    const { name, images: { portrait, landscape } = {}, description } = techInfo;
 
     const showContent = () => 
         Object.keys(techInfo).length > 0 && (
             <>
                 <h1 className="numbered-title"><span aria-hidden="true">03</span> Space launch 101</h1>
-                <img src={require(`../../${portrait}`).default} alt={`${name}`} />
-                <div className="dot-indicators flex"> 
+                <div>
+                    <img className="img-land" src={require(`../../${landscape}`).default} alt={`${name}`} />
+                    <img className="img-port" src={require(`../../${portrait}`).default} alt={`${name}`} />
+                </div>
+                <div className="tech-dot-indicators flex"> 
                     <TabsT />
                 </div>
 
