@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import CrewTabs from "./CrewTabs";
 import ErrorDisplay from '../ErrorDisplay';
 
-// import Commander from '../../assets/crew/image-douglas-hurley.png';
+
 
 const CrewPage = ({data}) => {
 
@@ -21,12 +21,9 @@ const CrewPage = ({data}) => {
             setIsError(true);
             return false;
         }
-
         setCrewInfo(member[0]);
-
+        
     }, [crew, person])
-
-    const Tabs = () => crew.map(({ name }, index) => <CrewTabs name={name} key={index} />)
     
     const handleNoDataError = () =>
     isError && <ErrorDisplay dataName="Crew member" pageName="crew" />;
@@ -39,9 +36,7 @@ const CrewPage = ({data}) => {
             <>
                 <h1 className="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
                 
-                <div className="dot-indicators flex">
-                    <Tabs />
-                </div>
+                <CrewTabs crew = {crew} />
                 
                 <article className="crew-details flow">
                     <header className="flow flow--space-small">

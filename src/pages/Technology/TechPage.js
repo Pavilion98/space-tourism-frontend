@@ -25,8 +25,6 @@ const TechPage = ({data}) => {
     }, [technology, tech])
 
 
-    const TabsT = () => technology.map(({ name, number }) => <TechTabs name={name} number={number} />)
-
     const handleNoDataError = () =>
     isError && <ErrorDisplay dataName="Tech Item" pageName="technology" />;
 
@@ -40,9 +38,8 @@ const TechPage = ({data}) => {
                     <img className="img-land" src={require(`../../${landscape}`).default} alt={`${name}`} />
                     <img className="img-port" src={require(`../../${portrait}`).default} alt={`${name}`} />
                 </div>
-                <div className="tech-dot-indicators flex"> 
-                    <TabsT />
-                </div>
+
+                <TechTabs technology={technology} />
 
                 <article className="tech-details flow">
                     <header className="flow flow--space-small">

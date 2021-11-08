@@ -297,6 +297,11 @@ select {
   backdrop-filter: blur(1.5rem);
 }
 
+.primary-navigation > li > a.active {
+  color: hsl( var(--clr-white) / 1);
+  border-color: hsl( var(--clr-white) / 1);
+}
+
 .primary-navigation a {
   text-decoration: none;
 }
@@ -454,7 +459,7 @@ select {
   color: black;
 }
 
-.tech-dot-indicators > [aria-selected= "true"] {
+.tech-dot-indicators > .active {
   background-color: hsl( var(--clr-white) / 1); 
   color: black;
 }

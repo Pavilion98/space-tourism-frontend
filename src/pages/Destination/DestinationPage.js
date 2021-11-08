@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
-import PlanetImage from '../../components/Destination/PlanetImage';
-import PlanetTabs from '../../components/Destination/PlanetTabs';
-import PlanetStats from '../../components/Destination/PlanetStats';
+import PlanetImage from './PlanetImage';
+import PlanetTabs from './PlanetTabs';
+import PlanetStats from './PlanetStats';
 import ErrorDisplay from '../ErrorDisplay';
 
 import { useParams } from 'react-router';

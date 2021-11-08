@@ -1,15 +1,30 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-const CrewTabs = ({ name, index }) => {
-    const getName = name.split(" ").join("-");
+const CrewTabs = ({ crew }) => {
 
-    const [dotClicked, setDotClicked ] = useState();
-    
+    const [clickedDot, setClickedDot ] = useState(0);
+
     const toggleTab = (index) => {
-        setDotClicked(index);
+        setClickedDot(index);  
     }
-    return <Link className={`${dotClicked === index ? "active" : ""}`} onClick={() => toggleTab(index)} to={`./${getName}`}><span className="sr-only"> {name} </span></Link>
+
+    return (
+        <div className="dot-indicators flex">
+            {crew.map( ({name}, index) => (
+                
+                <Link 
+                onClick={() => toggleTab(index)} 
+                className={`${clickedDot === index ? "active" : ""}`} 
+                to={`./${name.split(" ").join("-")}`}
+                key = {index}
+                >
+                <span className="sr-only"> {name} </span>
+                </Link>
+            ))}
+        </div>
+    )
+    
 };
 
 export default CrewTabs;
