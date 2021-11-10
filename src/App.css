@@ -764,7 +764,7 @@ img.img-port {
   }
 
   .grid-container--technology > div img {
-    max-width: 48%;
+    max-width: 40%;
     position: absolute;
     right: 0;
     bottom: 40px;
