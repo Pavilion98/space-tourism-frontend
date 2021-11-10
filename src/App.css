@@ -765,6 +765,9 @@ img.img-port {
 
   .grid-container--technology > div img {
     max-width: 48%;
+    position: absolute;
+    right: 0;
+    bottom: 40px;
   } 
 
   img.img-land {
@@ -773,10 +776,6 @@ img.img-port {
 
   img.img-port {
     display: block;
-    position: fixed;
-    right: 0;
-    bottom: 40px;
-    
   }
 
 }
