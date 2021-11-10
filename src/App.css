@@ -773,7 +773,7 @@ img.img-port {
 
   img.img-port {
     display: block;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 40px;
     
