@@ -763,19 +763,17 @@ img.img-port {
     '. tabs image .';
   }
 
-  .grid-container--technology > div img {
-    max-width: 40%;
+  .grid-container--technology > div img.img-port {
+    max-width: 50%;
     position: absolute;
     right: 0;
     bottom: 40px;
+    display: inline-block;
   } 
 
   img.img-land {
     display: none;
   }
 
-  img.img-port {
-    display: block;
-  }
 
 }
